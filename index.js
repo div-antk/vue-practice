@@ -10,4 +10,11 @@ var app2 = new Vue({
   data: {
     message: 'You loaded this page on ' + new Date().toLocaleString()
   }
-})
+});
+
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: true
+  }
+});
