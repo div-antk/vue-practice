@@ -22,8 +22,18 @@
   </div>
 
   <!-- falseの場合メッセージが消える -->
+  <!-- コンソールから app3.seen = false を入力すると消える -->
   <div id="app-3">
     <span v-if="seen">Now you see me</span>
+  </div>
+
+  <!-- 配列 -->
+  <div id="app-4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
   </div>
 
   <script type="text/javascript" src="index.js"></script>
