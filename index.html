@@ -36,11 +36,20 @@
     </ol>
   </div>
 
-  <!-- ユーザー入力。文字を逆さにする -->
+  <!-- ボタンを押すと文字を逆さにする -->
   <div id="app-5">
     <p>{{ message }}</p>
     <button v-on:click="reverseMessage">Reverse Message</button>
   </div>
+
+  <!-- 非同期でテキストが変わるフォーム -->
+  <div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+  </div>
+
+
+
 
   <script type="text/javascript" src="index.js"></script>
 </body>
