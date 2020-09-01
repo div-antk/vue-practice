@@ -1,0 +1,24 @@
+
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js テスト</title>
+  <!-- 開発用 -->
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{ 'こんにちは' + name + 'さん' }}</h1>
+    <!-- Dateオブジェクトを作成して getFullYearメソッドで年を求める -->
+    <p>今年は{{ (new Date()).getFullYear() }}年</p>
+    <!-- Mathオブジェクトの floorメソッド -->
+    <p>切り捨て : {{ Math.floor(num) }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./math-data1.js"></script>
+</body>
+
+</html>
