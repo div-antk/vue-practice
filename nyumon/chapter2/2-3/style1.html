@@ -1,0 +1,23 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js テスト</title>
+</head>
+
+<body>
+  <div id="app">
+    <p v-bind:style="{
+      <!-- キャメルケースで記述する。クォーティングすればキャメルケースでも可 -->
+      color: color,
+      textAlign: align,
+      fontSize: size + 'em'
+    }">（´ω｀）</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./style1.js"></script>
+</body>
+
+</html>
