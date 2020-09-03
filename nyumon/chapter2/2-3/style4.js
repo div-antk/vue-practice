@@ -8,7 +8,7 @@ var app = new Vue({
     },
     newStyle: {
       backgroundColor: "yellow",
-      fontSize: '4em',
+      fontSize: '4em'
     }
   }
 });
