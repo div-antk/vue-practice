@@ -1,0 +1,21 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js テスト</title>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="setAlign('left')">左寄せ</button>
+    <button @click="setAlign('center')">中央寄せ</button>
+    <button @click="setAlign('right')">右寄せ</button>
+    <p v-bind:style="myStyle">⊂( ・∇・)⊃</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./style4.js"></script>
+</body>
+
+</html>
