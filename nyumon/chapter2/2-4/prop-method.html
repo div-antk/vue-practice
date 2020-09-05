@@ -1,0 +1,21 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>算出プロパティ</title>
+</head>
+
+<body>
+  <div id="app">
+    <input name="msg" type="text" v-model="msg" />
+      <p>{{ msg }}</p>
+      <p>算出プロパティ: {{ dateProp }}</p>
+      <p>メソッド: {{ dateMethod() }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./prop-medhod.js"></script>
+</body>
+
+</html>
