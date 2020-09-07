@@ -1,0 +1,21 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <h1 v-if="getTime() == 'morning'">おはよう</h1>
+    <h1 v-else-if="getTime() == 'after'">ちわ</h1>
+    <h1 v-else-if="getTime() == 'こんばんは'"></h1>
+    <h1 v-else>夜も更けて。。</h1>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./v-if-else1.js"></script>
+</body>
+
+</html>
