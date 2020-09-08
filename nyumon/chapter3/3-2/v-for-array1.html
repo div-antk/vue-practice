@@ -1,0 +1,22 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <!-- コンソールで app.colors[0] = "white"; と打っても変更されない -->
+      <!-- 変更するには Vue.set(app.colors, 0, "white"); と入力する -->
+      <li v-for="color in colors">{{ color }}</li>
+    </ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./v-for-array1.js"></script>
+</body>
+
+</html>
