@@ -1,0 +1,32 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <table class="table">
+      <th>ID</th>
+      <th>名前</th>
+      <th>年齢</th>
+      <th>性別</th>
+      <th>都道府県</th>
+      <!-- データを識別するkeyを設定する -->
+      <tr v-for="customer in customers" v-bind:key="customer.id">
+        <td>{{ customer.id }}</td>
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.age }}</td>
+        <td>{{ customer.gender }}</td>
+        <td>{{ customer.pref }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./v-for4.js"></script>
+</body>
+
+</html>
