@@ -1,0 +1,20 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <button v-on:click="showFare(19)">大人料金は？</button>
+    <button v-on:click="showFare(9)">子供料金は？</button>
+    <h1 v-show="fare">料金: {{ fare }}円</h1>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./event-arg1.js"></script>
+</body>
+
+</html>
