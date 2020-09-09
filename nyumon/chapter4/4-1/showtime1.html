@@ -1,0 +1,24 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <h1
+      v-on:mouseenter="showTime()"
+      v-on:mouseleave="now = '' "
+    style="background-color: grey;">
+      現在時刻
+    </h1>
+    <p>{{ now }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./showtime1.js"></script>
+</body>
+
+</html>
