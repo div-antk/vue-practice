@@ -1,0 +1,28 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>行ってみたい国は？</h1>
+    <select v-model="countries" multiple>
+      <option v-for="country in clist" v-bind:value="country.en">
+        {{ country.ja }}
+      </option>
+    </select>
+    <br />
+    <button @click="countries=[]">クリア</button>
+    <ul>
+      <li v-for="country in countries">{{ country }}</li>
+    </ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./select3.js"></script>
+</body>
+
+</html>

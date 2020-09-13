@@ -1,0 +1,20 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <label for="dec">10進数: </label>
+    <input name="dec" v-model.number.lazy="dec" />
+    <p>2進数: {{ hex }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./to2-2.js"></script>
+</body>
+
+</html>
