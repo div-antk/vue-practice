@@ -1,0 +1,27 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>料金は？</h1>
+    <select v-model="age">
+      <option disabled value="">年齢を選択</option>
+      <option>3歳未満</option>
+      <option>13歳未満</option>
+      <option>65歳未満</option>
+      <option>65歳以上</option>
+    </select>
+    <br />
+    <p v-if="fare >= 0">{{ fare }}円</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./select1.js"></script>
+</body>
+
+</html>
