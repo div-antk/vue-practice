@@ -1,0 +1,50 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .belbtn {
+      margin-left: 10px;
+    }
+    .done {
+      color: gray;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h1>To&Do</h1>
+    <input
+      type="text"
+      v-model.trim="newtodo"
+      placeholder="todoを入力してください"
+    />
+    <button @click="addtodo">追加</button>
+    <ul>
+      <li
+        class="todolist"
+        v-for="todo, index in todolist"
+        v-bind:class="{done: todo.done}"
+        @mouseover="todo.hover=true"
+        @mouseout="todo.hover=false"
+      >
+      <input type="checkbox" v-model="todo.done" />
+      <span>{{ todo.text }}</span>
+      <button
+        class="delbtn"
+        @click="remove(index)"
+        v-show="todo.done && todo.hover"
+      >x
+      </button>
+    </ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./todo.js"></script>
+</body>
+
+</html>
