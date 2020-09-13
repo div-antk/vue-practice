@@ -8,13 +8,13 @@
 
 <body>
   <div id="app">
-    <label for="msg">文字列: </label>
-    <input name="msg" type="text" v-model="msg" />
-    <p>{{ msg }}</p>
+    <label for="adult">20歳以上？</label>
+    <input id="adult" type="checkbox" v-model="adult" />
+    {{ adult }}
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
-  <script type="text/javascript" src="./v-model.js"></script>
+  <script type="text/javascript" src="./checkbox.js"></script>
 </body>
 
 </html>
