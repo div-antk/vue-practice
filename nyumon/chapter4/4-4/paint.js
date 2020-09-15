@@ -37,7 +37,7 @@ var vm = new Vue({
       this.lines.push(this.line);
     },
     mousemove: function(event) {
-      if (!this.isDrawing) return ;
+      if (!this.isDrawing) return;
       console.log(event)
       // ひとつ前のポイント
       var prevPoint = this.line.points[this.line.points.length - 1];
@@ -57,7 +57,56 @@ var vm = new Vue({
     },
     mouseup: function(event) {
       this.isDrawing = false;
-    }
+    },
+    clearAll: function() {
+      this.lines = []
+      var ctx = this.canvas.getContext('2d');
+      ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+    },
+    undo: function() {
+      if (this.lines.length == 0) return;
+        // キャンバスをクリアする
+        var ctx = this.canvas.getContext('2d');
+        ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+        // 最後の線を削除
+        this.lines.pop();
+        // ポイントを2ずつ取り出して描画する
+        for (i = 0; i < this.lines.length; i++) {
+          var line = this.lines[i];
+          for (j = 0; j < line.points.length - 1; j++) {
+            point1 = line.points[j];
+            point2 = line.points[j + 1];
+            ctx.strokeStyle = line.color;
+            ctx.lineWidth = line.width;
+            ctx.beginPath();
+            ctx.moveTo(point1.x, point1.y);
+            ctx.lineTo(point2.x, point2.y);
+            ctx.stroke();
+          }
+        }
+      },
+      redraw: function() {
+        if (this.lines.length == 0) return;
+        // キャンバスをクリアする
+        var ctx = this.canvas.getContext('2d');
+        ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+        for (i = 0; i < this.lines.length; i++) {
+          var line = this.lines[i];
+          // 色を選択色にする
+          line.color = this.color
+          for (j = 0; j < line.points.length - 1; j++) {
+            point1 = line.points[j];
+            point2 = line.points[j + 1];
+            ctx.strokeStyle = line.color;
+            ctx.lineWidth = line.width;
+            ctx.beginPath();
+            ctx.moveTo(point1.x, point1.y);
+            ctx.lineTo(point2.x, point2.y);
+            ctx.stroke();
+            ctx.closePath();
+          }
+        }
+      }
   },
   mounted: function() {
     this.canvas = this.$refs.myCanvas;
