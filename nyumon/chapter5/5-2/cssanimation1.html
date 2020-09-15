@@ -1,0 +1,36 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: red;
+      animation: myAnime 4s;
+    }
+    @keyframes myAnime {
+      50% {
+        transform: translateX(200px);
+        background: yellow;
+      }
+      100% {
+        transform: translateX(400px) rotate(180deg);
+        background: green;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>キーフレームアニメーション</h1>
+  <div class="box">
+  </div>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./.js"></script> -->
+</body>
+
+</html>
