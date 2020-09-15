@@ -1,0 +1,19 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <p>今日は{{ date | jaDay }}</p>
+    <p>来年の今日は{{ date | nextYear | jaDay }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./jaDay2.js"></script>
+</body>
+
+</html>
