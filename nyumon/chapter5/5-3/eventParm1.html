@@ -1,0 +1,23 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="box" v-bind:style="{backgroundColor: color}">
+      <color-button bcolor="red" @change-color="changeColor">RED</color-button>
+      <color-button bcolor="orange" @change-color="changeColor">ORANGE</color-button>
+      <color-button bcolor="blue" @change-color="changeColor">BLUE</color-button>
+      <color-button bcolor="green" @change-color="changeColor">GREEN</color-button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./eventParm1.js"></script>
+</body>
+
+</html>
