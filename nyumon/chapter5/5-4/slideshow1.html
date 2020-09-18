@@ -1,0 +1,44 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .v-enter-active,
+    .v-leave-active {
+      transition: all 1s;
+    }
+    .v-enter {
+      opacity: 0;
+      transform: rotate(180deg) scale(0.1);
+    }
+    .v-leave-to {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" class="slideshow">
+    <transition mode="out-in">
+      <photo-display
+        @next-photo="nextPhoto"
+        v-bind:photo="photo"
+        v-bind:key="photo.id"
+      ></photo-display>
+    </transition>
+    <control-panel
+      class="cpanel"
+      @prev-photo="prevPhoto"
+      @next-photo="nextPhoto"
+      @toggle-auto="toggleAuto"
+    ></control-panel>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./slideshow1.js"></script>
+</body>
+
+</html>
