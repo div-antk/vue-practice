@@ -1,0 +1,26 @@
+<! DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="app" class="slideshow">
+    <photo-display
+      @next-photo="nextPhoto"
+      v-bind:photo="photo"></photo-display>
+    <control-panel
+      class="cpanel"
+      @prev-photo="prevPhoto"
+      @next-photo="nextPhoto"
+      @toggle-auto="toggleAuto"
+    ></control-panel>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script type="text/javascript" src="./slideshow1.js"></script>
+</body>
+
+</html>
