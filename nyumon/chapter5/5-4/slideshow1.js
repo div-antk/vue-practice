@@ -71,3 +71,53 @@ Vue.component('control-panel', {
     };
   }
 });
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    auto: false,
+    // すべての写真を管理するオブジェクト
+    photos: photos,
+    id: 0,
+    photo: null,
+    timerID: null,
+    // スライドの間隔（msec）
+    SLIDEINTERVAL: 3000
+  },
+  methods: {
+    nextPhoto: function() {
+      this.id++;
+      if (this.id >= this.photos.length) {
+        this.id = 0;
+      }
+      this.photo = this.photos[this.id];
+    },
+    prevPhoto: function() {
+      this.id--;
+      if (this.id < 0) {
+        this.id = this.photos.length - 1;
+      }
+      this.photo = this.photos[this.id];
+    },
+    // 自動モード
+    toggleAuto: function(auto) {
+      if (this.auto == auto) return;
+      this.auto = auto;
+      if (auto) {
+        this.slideShow();
+      } else {
+        clearTimeout(this.timerID);
+      }
+    },
+    slideShow: function() {
+      this.nextPhoto();
+      // thisを退避
+      var self = this;
+      this.timerID = setTimeout(self.slideShow, self.SLIDEINTERVAL);
+    }
+  },
+  // 最初のスライドを固定
+  created: function() {
+    this.photo = this.photos[this.id];
+  }
+});
