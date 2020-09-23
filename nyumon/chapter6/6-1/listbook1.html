@@ -23,10 +23,10 @@
     <table class="table">
       <th>商品名</th>
       <th>著者</th>
-      <th>価格</th>
+      <th @click="reverseOrder">価格 {{ orderIcon }}</th>
       <th>残り</th>
       <tr
-        v-for="item in items"
+        v-for="item in sortedItems"
         v-bind:key="item.id"
         v-bind:class="{soldout: item.stock==0}"
       >
